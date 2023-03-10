@@ -9,4 +9,4 @@ This repo is to house interesting exercises from ENSF-338 (Data Structures and A
 ## Collaborators
 
 - Axel Sanchez
-- Mariiya Podgaietska
+- Mariia Podgaietska
