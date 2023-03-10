@@ -1,11 +1,13 @@
 # Assignment 3, Exercise 3.2
 
-# Contributors: Axel Sanchez, Mariya Podgaietska
+# Contributors: Axel Sanchez, Mariia Podgaietska
+
 
 import json
 import random
 import timeit
 from matplotlib import pyplot as plt
+
 
 # function to get the data
 
@@ -14,12 +16,14 @@ def get_data():
     with open("Assignment3/ex2tasks.json", "r") as json_file:
         return json.load(json_file)
 
+
 # function to get the tasks
 
 
 def get_tasks():
     with open("Assignment3/ex2tasks.json", "r") as json_file:
         return json.load(json_file)
+
 
 # function to test the location of the target
 
@@ -78,6 +82,10 @@ for index in range(len(tasks)):
     config_midpoints.append(config)
     search_times.append(timeit.timeit(
         lambda: binary_search(data, tasks[index], config), number=1))
+
+
+# Sorting the list
+config_midpoints.sort()
 
 
 # Plotting the results
