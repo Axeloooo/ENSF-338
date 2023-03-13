@@ -84,10 +84,6 @@ for index in range(len(tasks)):
         lambda: binary_search(data, tasks[index], config), number=1))
 
 
-# Sorting the list
-config_midpoints.sort()
-
-
 # Plotting the results
 plt.scatter(config_midpoints, search_times, label='binary search')
 plt.xlabel('configured midpoint')

@@ -41,24 +41,20 @@ def inefficient_search(data, target):
 
 
 # Generating random data and creating lists for storing the results
-data = list(range(1000000))
+data = list(range(1000))
 efficient_search_times = []
 inefficient_search_times = []
 targets = []
 
 
 # Measuring the time it takes to search for a target value in the data
-for i in range(100):
+for i in range(1000):
     target = random.randint(0, len(data)-1)
     targets.append(target)
     efficient_search_times.append(timeit.timeit(
         lambda: efficient_search(data, target), number=1))
     inefficient_search_times.append(timeit.timeit(
         lambda: inefficient_search(data, target), number=1))
-
-
-# Sorting the target values
-targets.sort()
 
 
 # Print an aggregate of the target values
